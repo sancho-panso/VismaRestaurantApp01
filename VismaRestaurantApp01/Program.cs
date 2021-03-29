@@ -8,7 +8,7 @@ namespace VismaRestaurantApp01
     {
         static void Main(string[] args)
         {
-            //seed initial data to file on first project build
+            //seed initial data to files on first project build
             DataSeed dataSeed = new DataSeed();
             dataSeed.SeedStockToFile();
 
