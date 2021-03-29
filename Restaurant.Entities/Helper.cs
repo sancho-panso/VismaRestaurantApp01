@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Restaurant.Entities
 {
+    //helper methods to convert string to int colletion and back to string
     static class Helper
     {
         public static string ListToString(List<int> stock)

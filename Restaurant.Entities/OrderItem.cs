@@ -15,6 +15,7 @@ namespace Restaurant.Entities
             MenuItems = menuItems;
             Date_Time = DateTime.Now.ToString("u");
         }
+        // constructor parse input string to obect properties, this help on object creation from text file 
         public OrderItem(string param)
         {
             string[] paramArray = param.Split(',');

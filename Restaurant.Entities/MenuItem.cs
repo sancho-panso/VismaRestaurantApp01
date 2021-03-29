@@ -16,6 +16,8 @@ namespace Restaurant.Entities
             Name = name;
             StockItems = stockItems;
         }
+
+        // constructor parse input string to obect properties, this help on object creation from text file 
         public MenuItem(string param)
         {
             string[] paramArray = param.Split(',');

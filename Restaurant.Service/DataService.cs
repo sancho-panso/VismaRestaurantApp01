@@ -8,6 +8,7 @@ namespace Restaurant.Service
 {
     public class DataService
     {
+        //helper methods to get restaurant's items data from and save back to .txt files
         public List<StockItem> GetStock()
         {
             List<StockItem> stock = new List<StockItem>();

@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace Restaurant.Service
 {
+    // method for work with collection of order's items: place new order, display all orders
     public class OrderItemService
     {
         private List<StockItem> _stockItem;
@@ -40,7 +41,7 @@ namespace Restaurant.Service
             }
         }
 
-
+        // metod generate int collection based on user inputs, it additionally validate if there are enough stock items to fullfill order
         private List<int> ListOfMenuId()
         {
             string input = "";

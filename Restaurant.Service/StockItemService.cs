@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace Restaurant.Service
 {
+    // method for work with collection of stock's items: create stock item, update stock item, remove stock item, display list of stock items
     public class StockItemService
     {
         private List<StockItem> _stockItem;
@@ -22,7 +23,7 @@ namespace Restaurant.Service
 
             double size = ValidationService.InputValidDouble("Please enter stock item portion size:");
 
-            Units unit = InputValidEnum();
+            Units unit = ValidationService.InputValidEnum();
             
             StockItem item = new StockItem(name, size, unit);
             item.ID = id;
@@ -78,33 +79,6 @@ namespace Restaurant.Service
             }
             Console.WriteLine();
         }
-
-
-        private static Units InputValidEnum()
-        {
-            while (true)
-            {
-                Console.WriteLine("Please enter stock item units:\n" +
-                    "0 for kg\n" +
-                    "1 for litre\n" +
-                    "2 for bootle\n" +
-                    "3 for bag\n" +
-                    "4 for piece\n" +
-                    "5 for carton");
-                string input = Console.ReadLine();
-                //if (Enum.TryParse<Units>(input,out Units unit))
-                if(Enum.TryParse(input, out Units outputEnum) && Enum.IsDefined(typeof(Units), outputEnum))
-                {
-                    return outputEnum;
-                }
-                else
-                {
-                    Console.WriteLine($"We can not convert input: '{input}' \nto an unit, please try again");
-                }
-            }
-        }
-
-
     
     }
 }

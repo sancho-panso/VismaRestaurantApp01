@@ -5,7 +5,8 @@ using System.Linq;
 
 
 namespace Restaurant.Service
-{
+{ 
+    // methods for operation with menu items: create item, display items, update menu item name, add stock items to menu item
     public class MenuItemService
     {
         private List<StockItem> _stockItem; 
@@ -70,7 +71,7 @@ namespace Restaurant.Service
         }
 
 
-
+        // helper method to generate int collection based on user inputs
         private List<int> ListOfId(List<int> idList)
         {
             string input = "";
