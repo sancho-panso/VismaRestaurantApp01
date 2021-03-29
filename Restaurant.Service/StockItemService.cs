@@ -78,6 +78,7 @@ namespace Restaurant.Service
             {
                 item.PrintToConsole();
             }
+            Console.WriteLine();
         }
 
 

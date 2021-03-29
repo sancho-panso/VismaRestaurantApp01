@@ -19,7 +19,7 @@ namespace VismaRestaurantApp01
             OrderItemService orderService = new OrderItemService(stock, menu, orders);
 
             //stockService.CreateStockItem();
-            stockService.UpdateStockItem();
+            //stockService.UpdateStockItem();
             //stockService.RemoveStockItem();
             stockService.DisplayStockItems();
             //dataService.SaveStock(stock);
@@ -32,6 +32,7 @@ namespace VismaRestaurantApp01
 
             orderService.PlaceNewOrder();
             stockService.DisplayStockItems();
+            menuService.DisplayMenuItems();
             orderService.DisplayOrderList();
             dataService.SaveStock(stock);
             dataService.SaveOrders(orders);

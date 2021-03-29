@@ -37,6 +37,7 @@ namespace Restaurant.Service
             {
                 item.PrintToConsole();
             }
+            Console.WriteLine();
         }
 
         public void UpdateMenuItemName()
@@ -95,8 +96,8 @@ namespace Restaurant.Service
                     Console.WriteLine("No item with required ID found in the stock list");
                 }
                 Console.WriteLine("Press Y for continue or any another button for escape");
-                input = Console.ReadLine();
-            } while (input == "Y");
+                input = Console.ReadLine().ToLower();
+            } while (input == "y");
 
             return idList;
         }
