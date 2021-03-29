@@ -8,14 +8,22 @@ namespace VismaRestaurantApp01
     {
         static void Main(string[] args)
         {
+            //seed initial data to file on first project build
+            DataSeed dataSeed = new DataSeed();
+            dataSeed.SeedStockToFile();
+
+            //get data from files
             DataService dataService = new DataService();
             List<StockItem> stock = dataService.GetStock();
             List<MenuItem> menu = dataService.GetMenu();
             List<OrderItem> orders = dataService.GetOrders();
 
+            // services initialization
             StockItemService stockService = new StockItemService(stock);
             MenuItemService menuService = new MenuItemService(stock, menu);
             OrderItemService orderService = new OrderItemService(stock, menu, orders);
+
+            // uncomment bellow method to use it
 
             //stockService.CreateStockItem();
             //stockService.UpdateStockItem();
